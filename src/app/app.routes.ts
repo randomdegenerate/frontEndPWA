@@ -10,17 +10,20 @@ export const routes: Routes = [
         path: 'home',
         loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
       },
-      //Add more paths for navigation tabs
+      {
+        path: 'weather',
+        loadComponent: () => import('./weather-query/weather-query.page').then((m) => m.WeatherQueryPage),
+      },
       {
         path: '',
-        redirectTo: '/example/home',
+        redirectTo: '/navigation/home',
         pathMatch: 'full',
       },
     ],
   },
   {
     path: '',
-    redirectTo: '/example/home',
+    redirectTo: '/navigation/home',
     pathMatch: 'full',
-  },
+  }
 ];
