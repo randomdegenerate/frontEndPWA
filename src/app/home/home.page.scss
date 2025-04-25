@@ -25,3 +25,30 @@
 #container a {
   text-decoration: none;
 }
+
+ion-col {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  background-color: #135d54;
+  border: solid 1px #fff;
+  color: #fff;
+}
+
+ion-row {
+  border: solid 1px grey;
+  height: 33.3vh;
+}
+
+ion-row.weekDisplay{
+  margin: auto;
+  align-self: center;
+  height: 10vh;
+  width: 80vw;
+}
+
+ion-row.weekDisplay > ion-col{
+  background-color: beige;
+  border: solid 1px grey;
+}
