@@ -1,16 +1,21 @@
 <ion-content>
-  <ion-header>
-    <ion-title class="ion-text-center">
-      Weather App
-    </ion-title>
+  <ion-header class="ion-align-items-center">
+    <ion-toolbar class="ion-align-items-baseline">
+      <ion-title color="tertiary">Weather App by Sandil</ion-title>
+      <ion-button routerLink="/query">
+        weather queries
+        <ion-icon name="cloud" slot="end"></ion-icon>
+      </ion-button>
+    </ion-toolbar>
   </ion-header>
 
   <ion-grid>
-    <ion-row>AVG TEMP:{{strand}}</ion-row>
+    <ion-row>AVG TEMP: {{curTemp}} </ion-row>
     <ion-row class="weekDisplay" id="weekly">
       <ion-col></ion-col>
     </ion-row>
     <ion-row>3</ion-row>
   </ion-grid>
 </ion-content>
+
 <!--Try to show regional weather data--> 

@@ -8,17 +8,14 @@ import dotenv from 'dotenv';
 })
 
 export class WeatherService {
-
+/*
   constructor(private httpClient : HttpClient) {}
 
   GetWeatherWeek(location: String):Observable<any>{
-    dotenv.config();
-    const apiKey = process.env['API_KEY'];
-
-    return this.httpClient.get('https://api.weatherapi.com/v1/forecast.json/?key=' + apiKey + "&q=" + location + "&days=7&aqi=no&alerts=no");
+    return this.httpClient.get("https://api.weatherapi.com/v1/forecast.json?key=add1424e4ab140c190e75227252504&q=" + location +"&days=7&aqi=no&alerts=n");
   }
 
-  /*GetWeatherCurrent(location: String): Observable<any>{
+  GetWeatherCurrent(location: String): Observable<any>{
     dotenv.config();
     const apiKey = process.env['API_KEY'];
     return this.httpClient.get('https://api.weatherapi.com/v1/current.json/?key=' + apiKey + "&q=" + location + "aqi=no");
