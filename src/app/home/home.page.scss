@@ -41,14 +41,23 @@ ion-row {
   height: 33.3vh;
 }
 
-ion-row.weekDisplay{
+#weekly {
   margin: auto;
   align-self: center;
-  height: 10vh;
-  width: 80vw;
+  height:auto;
 }
 
-ion-row.weekDisplay > ion-col{
+ion-row.weekly > ion-col{
+  color: black;
   background-color: beige;
   border: solid 1px grey;
 }
+
+ion-item{
+  justify-content: right;
+  background: transparent;
+ }
+
+ion-list{
+  background: transparent;
+ }
