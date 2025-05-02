@@ -1,6 +1,6 @@
 <ion-content>
-  <ion-header class="ion-align-items-center">
-    <ion-toolbar class="ion-align-items-baseline">
+  <ion-header>
+    <ion-toolbar>
       <ion-title color="tertiary">Home</ion-title>
       <ion-button routerLink="/query">
         weather queries
@@ -10,31 +10,51 @@
   </ion-header>
 
   <ion-grid>
-    <ion-row></ion-row>
-    <ion-row id="weekly">
-      <!--Week display of weather 
-      show avg temp, weather and rain
-      chart maybe added later-->
-        <ion-col style="overflow-x: scroll;">
-          <ion-list>
-            <ion-item>
-            </ion-item>
-            <ion-item>
-              Weather
-              <ion-icon slot="start" name="rainy"></ion-icon>
-            </ion-item>
-            <ion-item>
-              Temp
-            </ion-item>
-            <ion-item>
-              rain%
-            </ion-item>
-          </ion-list>
+    <ion-row >
+      <ion-col>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+    <ion-row id="hourly">
+      <ion-col>
+        <div class="scrollName"></div>
+      </ion-col>
+      <ion-col class="split-col">
+          <div style="overflow-x: scroll;" class="scroll-display">
+            <display-hour></display-hour>
+          </div>
+      </ion-col>
+      <ion-col>
+        <div class="scrollName"></div>
+      </ion-col>
+      <ion-col class="split-col">
+          <div style="overflow-x: scroll;" class="scroll-display">
+              <display-week></display-week>
+          </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="cities">
+      <ion-col *ngFor="let city of cityData;let i = index">
+        <ion-list lines="full">
+          <ion-item>
+            <ion-input fill="outline" [(ngModel)]="cityNames[i]" label="{{storedCityNames[i]}}" labelPlacement="floating"></ion-input>
+            <ion-button color="tertiary" (click)="updateCity(i)">reload</ion-button>
+          </ion-item>
+          <ion-item>
+            <img alt="condition" [src]="city.current.condition.icon" width="50px">
+            {{city.current.condition.text}}
+          </ion-item>
+          <ion-item>
+            {{city.current.temp_c}}
+          </ion-item>
+          <ion-item>
+            {{city.current.last_updated[11]}}{{city.current.last_updated[12]}}{{city.current.last_updated[13]}}{{city.current.last_updated[14]}}{{city.current.last_updated[15]}}
+          </ion-item>
+        </ion-list>
         </ion-col>
     </ion-row>
-    <ion-row></ion-row>
   </ion-grid>
 </ion-content>
 
 <!--Try to show regional weather data--> 
-io

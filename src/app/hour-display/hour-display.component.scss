@@ -1,0 +1,19 @@
+#item-container{
+    border: lightgrey solid 2px; 
+    overflow: visible;
+    width: 450px;
+}
+
+ion-col > ion-item{
+    justify-content: right;
+    background: transparent;
+    width: 15vh;
+  
+    border : black solid 2px
+}
+
+ion-item > ion-list{
+    background: transparent;
+    height: 219px;
+    width: 14vh;
+}  

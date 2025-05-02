@@ -8,7 +8,14 @@ import { addIcons } from 'ionicons';
   templateUrl: './weather-query.page.html',
   styleUrls: ['./weather-query.page.scss'],
   standalone: true,
-  imports: [IonButton, IonToolbar, IonContent, IonHeader, IonTitle, IonIcon,RouterModule]
+  imports: [IonButton, 
+            IonToolbar, 
+            IonContent, 
+            IonHeader, 
+            IonTitle, 
+            IonIcon,
+            RouterModule
+  ]
 })
 export class WeatherQueryPage implements OnInit{
 

@@ -1,0 +1,21 @@
+<ion-item id="item-container">
+  <ion-item *ngFor="let hr of dayData;let i = index" style="border: lightgrey solid 2px; min-width: 150px;">
+        <ion-list lines="full">
+          <ion-item>
+            {{hr.time[11]}}{{hr.time[12]}}{{hr.time[13]}}{{hr.time[14]}}{{hr.time[15]}}
+          </ion-item>
+          <ion-item>        
+            <img [src]="hr.condition.icon" alt="condition" width="50px">
+            {{hr.condition.text}}
+          </ion-item>
+          <ion-item>
+          {{hr.temp_c}}
+          </ion-item>
+          <ion-item>
+            <ion-icon name="water"></ion-icon>
+            {{hr.chance_of_rain}}%
+          </ion-item>
+        </ion-list>
+  </ion-item>
+</ion-item>
+

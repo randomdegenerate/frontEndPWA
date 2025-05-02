@@ -9,6 +9,7 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 
 export class AppComponent {
 
+  game: string = "game";
   constructor() {
   }
 }

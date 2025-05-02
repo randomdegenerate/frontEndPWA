@@ -30,10 +30,9 @@ ion-col {
   display: flex;
   justify-content: center;
   text-align: center;
-
-  background-color: #135d54;
   border: solid 1px #fff;
   color: #fff;
+  padding: 0px;
 }
 
 ion-row {
@@ -41,23 +40,82 @@ ion-row {
   height: 33.3vh;
 }
 
-#weekly {
-  margin: auto;
-  align-self: center;
+#hourly {
   height:auto;
+  width: 100%
 }
 
-ion-row.weekly > ion-col{
+.cities{
+ height: 30vh;
+ padding: 10px;
+ justify-content: center;
+}
+
+.cities > ion-col{
+  margin: auto;
+  max-width: 250px;
+  height: 260px;
+  background-color: rgb(30, 30, 30);
+}
+
+.cities > ion-col > ion-list {
+  width: 200px;
+}
+
+.cities > ion-col > ion-list > ion-item{
+  min-height: 60px;
+}
+
+ion-input {
+  max-height: 2px;
+}
+
+ion-item > ion-button{
+  height: 30px;
+  width: 50px;
+}
+
+.splitRow {
+  max-width: 10vw;
+}
+
+/*.scrollName{
+*
+*}
+*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  background-color: dodgerblue;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: #f1f1f1;
+  color: #000;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+ion-row.hourly > ion-col{
   color: black;
   background-color: beige;
   border: solid 1px grey;
+  height: 100%;
 }
 
-ion-item{
+ion-col > ion-item{
   justify-content: right;
   background: transparent;
- }
+  width: 13vw;
 
-ion-list{
+  border : black solid 2px
+}
+
+
+ion-item > ion-list{
   background: transparent;
+  height: 219px;
  }
